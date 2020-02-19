@@ -1,0 +1,57 @@
+<?php
+
+#INSERT INTO `oferta`( `titulo`, `imagen`, `descripcion`) VALUES ("Pizza Vegana"," ","Pizza vegetal sin carne")
+
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];    
+        $miOferta = $miOferta->fetchObject() ;  
+        $titulo =  $miOferta->titulo;
+        $descripcion =  $miOferta->descripcion;
+        $imagen =  $miOferta->imagen;
+        $submit = "Modificar Oferta";
+        $action = "index.php?c=Oferta&&a=GrabarOferta&&id=$id";  //&&imagen=$imagen para probar pasar imagen por url
+        $encabezado = "MODIFICAR OFERTA";
+        $boton = "Modificar";
+
+    }else{
+        $titulo =  "";
+        $descripcion =  "";
+        $imagen = "";
+        $submit = "Crear Oferta";
+        $action = "index.php?c=Oferta&&a=GrabarOferta";
+        $encabezado = "CREAR OFERTA ";
+        $boton = "Crear";
+    }
+        ?>
+
+        <h1> <?=$encabezado?></h1><br>
+    <form action=<?=$action?> method="POST" enctype="multipart/form-data">
+   
+        <label for="titulo">Titulo</label>
+        <input type="text" value="<?=$titulo?>" name="titulo" required>
+
+        <br>
+        <?php
+            if(isset($id)){
+                ?>
+                <img src="uploads/img/<?=$imagen?>"> <br>
+            <?php
+            }
+        ?>
+        <input type="file" name="imagen" ><br>
+
+        <label for="descripcion">Descripcion</label><br>
+        <textarea name="descripcion"  id="descripcion" cols="50" rows="5"><?=$descripcion?></textarea><br>
+
+        <input type="submit" name="submit" value="<?=$boton?>">
+    </form>
+ 
+    <?php
+    
+         echo "<br> &nbsp; <a href='index.php'>Inicio</a>";
+
+    ?>
+
+
+
+

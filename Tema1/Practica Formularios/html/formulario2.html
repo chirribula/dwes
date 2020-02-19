@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>formulario2</title>
+    
+</head>
+<body>
+    <form action="script.php" method="get">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nom">Nombre</label>
+            <input type="text" name="nom" id="nom" size="40">
+            <br>
+            <label for="mail">Email</label>
+            <input type="email" placeholder="@" name="mail" id="mail" size="30">
+            <br>
+            <label for="pobla">Población</label>
+            <input type="text" name="pobla" id="pobla">
+            <br>    
+            <label for="sexo">Sexo</label>
+            <br>
+            <input type="radio" name="sexo" value="hombre"id="hom">Hombre
+            <br>
+            <input type="radio" name="sexo" value="mujer" id="muj">Mujer
+            <br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Opinión personal</legend>
+            <label for="freciencia">Frecuencia de los viajes</label>
+            <br>
+            <select name="frecuencia" id="frecuencia">
+                <option value="varias_Veces">Varias veces al Día</option>
+                <option value="nunca">Nunca</option>
+            </select>
+            <br>
+            <label for="comentarios">Commentarios sobre su satisfacción personal</label>
+            <br>
+            <textarea name="comentarios" id="" cols="80" rows="8"></textarea>
+            <br>
+            <input type="checkbox" name="info" id="info" checked >Deseo recibir notificación de las novedades en las líeneas de autobuses
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar formulario">
+        <br>
+        <br>
+        <input type="reset" value="Borrar todo">
+    </form>
+
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+body{
+    background-color:grey;
+}
+
+header h1{
+    color:#39BFE7;
+    text-align: center;
+    font-style: italic;
+    padding: 1%;
+}
+
+img.Micono{
+    width: 30px !important;
+}

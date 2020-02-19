@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <title>ej1</title>
+</head>
+<body>
+    
+    <form action="mailto:marodriguez.informatica@gmail.com" method="post">
+        <fieldset>
+            <legend>Formulario de opciones </legend> 
+
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+                <br>
+                <label for="ape">Apellidos</label>
+                <input type="text" name="ape" id="ape">
+                <br>
+                <label for="dir">Dirección</label>
+                <input type="text" name="dir" id="dir">
+                <br>
+
+                <input type="radio" name="senyal" value="Wifi" id="wifi">Wifi
+                <input type="radio" name="senyal" value="Cable" id="cable">Cable
+                <input type="radio" name="senyal" value="Fibra" id="fibra">Fibra
+                <br>
+                <label for="inst">Instituto</label>
+                <input type="text" name="inst" id="inst">
+                <br>
+                <label for="estudios">Estudios elegidos</label>
+                <input type="text" name="estudios" id="estudios">
+                <br>
+
+                <select name="dia" id="dia">
+                    <option value="lunes">Lunes</option>
+                    <option value="martes">Martes</option>
+                    <option value="miercoles">Miércoles</option>
+                    <option value="jueves">Jueves</option>
+                    <option value="viernes">Vieres</option>
+                </select>
+        </fieldset>  
+
+        <fieldset>
+            <legend>Preferencias</legend>
+
+                <input type="checkbox" name="historia" id="historia">Historia
+                <input type="checkbox" name="geografia" id="geografia">Geografía 
+                <input type="checkbox" name="len" id="len">Lengua
+                <input type="checkbox" name="mate" id="mate">Matemáticas
+                <br>
+                <textarea name="texto" id="texto" cols="100" rows="5" placeholder="Inserte aquí el texto"></textarea>
+        </fieldset>
+    </form>
+</body>
+</html>

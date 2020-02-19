@@ -1,0 +1,22 @@
+<?php
+
+
+while($nota = $todasNotas -> fetchObject() ){
+    echo $nota -> nombre . " - " . $nota -> titulo. " - " . $nota -> descripcion ."<br>" ;
+    
+}
+if( $_SESSION['guardado'] == "complete"){
+    echo "<br>Nota introducida correctamente<br>";
+    $_SESSION['guardado'] = "";
+}
+
+if( $_SESSION['guardado'] == "failed"){
+    echo "<br>Error al crear una nueva nota<br>";
+    $_SESSION['guardado'] = "";
+}
+
+
+
+    echo "<br> &nbsp; <a href='index.php'>Inicio</a>";
+?>
+

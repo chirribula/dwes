@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="VERÓNICA TORO GÓMEZ" />
+    <title>Práctica Repaso Html y Css</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+        <div id="contenedor">
+
+            <header>
+             
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="formulario2.html">Forumulario1</a></li>
+                    <li><a href="formulario2.html">Formulario2</a></li>
+                    <li><a href="formulario2.html">Formulario3</a></li>
+                </ul>
+            </nav>
+
+            <section>
+
+                <article id="art1">
+                        <form id="formulario" name="formulario" action="mailto:chirribula@hotmail.com" method="post">
+                              
+
+                                    <div class="iz">
+                                         <label for="nombre">Nombre</label>
+                                     </div>
+                                     <div class="de">
+                                         <input type="text" size="20" name="nombre" id="nombre" required>
+                                     </div>
+
+                                     <div class="iz">   
+                                        <label for="ape">Apellido</label>
+                                    </div>
+                                    <div class="de">
+                                         <input type="text" size="30" maxlength="20" name="ape" id="ape" required>
+                                     </div>
+
+                                     <div class="iz">   
+                                         <label for="edad">Edad</label>
+                                    </div>
+                                    <div class="de">
+                                         <input type="number" required name="edad" id="edad" size="5" maxlength="2" min="18" max="99">
+                                    </div>
+
+                                    <div class="iz">   
+                                        <label for="movil">Móvil</label>
+                                    </div>   
+                                    <div class="de">
+                                         <input type="text" required name="movil" id="movil" size="15" maxlength="9">
+                                    </div>
+                                  
+                                    <div class="iz">
+                                        <label for="email">Correo Electrónico</label>
+                                    </div>
+                                    <div class="de">
+                                     <input type="text" required name="email" id="email" size="40" maxlength="30">
+                                    </div>
+                                    
+                                    <div class="iz">
+                                         <label for="pass">Contraseña</label>
+                                     </div>
+                                     <div class="de">
+                                         <input type="password" required name="pass" id="pass" size="40" >
+                                    </div>
+                                    
+                                    <div class="iz">
+                                         <label for="pass2">Repetir contraseña</label>
+                                     </div>
+                                     <div class="de">
+                                        <input type="password" required name="pass2" id="pass2" size="40">
+                                    </div>
+
+                                    <div class="iz">
+                                        <label for="recordar">Recordar</label>
+                                        <input type="checkbox" name="recordar">
+                                    </div> 
+                                    <div class="de">       
+                                    </div>
+                                    <div class="iz">
+                                        <input type="submit" value="Enviar" onclick="return validar()">    
+                                        <input type="reset" value="Borrar" > 
+                                    </div> 
+                                    <div class="de">       
+                                    </div> 
+                               
+                        
+                            </form>
+                </article>
+
+            </section>
+
+            <aside>
+                <img src="../img/logo.png" alt="foto logo">
+            </aside>
+
+            <footer>
+                <p>Trabajo creado por: </p>
+                <p id="nombre">VERÓNICA TORO GÓMEZ</p>
+            </footer>
+
+        </div>
+
+
+    
+</body>
+</html>

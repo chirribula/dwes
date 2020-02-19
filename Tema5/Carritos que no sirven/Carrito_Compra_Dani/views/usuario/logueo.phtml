@@ -1,0 +1,65 @@
+<?php
+require_once 'views/layout/header.php';
+require_once 'views/layout/nav.php';
+
+?>
+<div id="contenedor">
+    <?php
+    if(!$_SESSION['user']){
+    ?>
+    <div id="logueo">
+        <h2>Entrar a la web</h2>
+
+        <form action="index.php?c=Usuario&&a=ComprobarLogueo" method="post">
+            <label for="email">Correo Electronico</label>
+            <input type="email" name="email" id="email" required>
+            <label for="Contrasenia">Contraseña</label>
+            <input type="password" name="contrasenia" id="contrasenia" required>
+            <input type="submit" name="submit" value="Enviar">
+        </form>
+
+        <ul>
+            <li><a href="">Registrar aqui</a></li>
+        </ul>
+    </div>
+    <?php
+    }else{
+    ?>
+    <div>
+        <p>Mi Carrito</p>
+        <ul>
+            <li><a href="">Productos:</a></li>
+            <li><a href="">Total:</a></li>
+            <li><a href="">Ver el carrito</a></li>
+        </ul>
+    </div>
+    <div>
+        <p><?=$_SESSION['user']->nombre?> <?=$_SESSION['user']->apellidos?></p>
+        <ul>
+            <?php 
+                if($_SESSION['admin']){
+            ?>
+            <li><a href="">Gestionar categoria</a></li>
+            <li><a href="">Gestionar producto</a></li>
+            <li><a href="">Gestionar pedidos</a></li>
+            <li><a href="">Mis Pedidos</a></li>
+            <li><a href="index.php?c=Usuario&&a=CerrarSession">Cerrar Session</a></li>
+            <?php
+            }else{
+            ?>
+            <li><a href="">Mis Pedidos</a></li>
+            <li><a href="index.php?c=Usuario&&a=CerrarSession">Cerrar Session</a></li>
+            <?php
+            }
+            ?>
+        </ul>
+    </div>
+    <?php
+    }
+    ?>
+</div>
+
+
+<?php
+require_once 'views/layout/footer.php';
+?>

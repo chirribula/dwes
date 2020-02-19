@@ -1,0 +1,78 @@
+body{
+    margin: 0px auto;
+    background-color: darkgrey;
+}
+
+div#contenedor{
+    display:grid;
+    grid-template-columns: 70% 1% 1fr;  /*tamaño de las columnas*/
+    grid-template-rows: auto auto auto auto ; /* tamaño de las filas automático*/ 
+    grid-template-areas: "header header header"
+                         "nav nav nav"
+                         "section margen aside"
+                         "footer footer footer";
+}
+
+header{
+    grid-area:header;
+    background-image: url(../img/fotobanner.jpg);
+    padding: 5%;
+    background-size: 100%;  
+}
+
+nav a{
+    text-decoration: none;
+    background-color: black;
+    padding: 1%;
+    color: white;
+    
+}
+nav ul li{
+    list-style-type: none;
+    float: left;
+    padding: 1%;
+    background-color:black;
+	overflow: hidden;
+}
+
+section{
+    grid-area: section;
+    clear: both;
+    padding: 7%;
+    text-align: justify;
+}
+nav{
+    grid-area: nav;
+	background-color: black;			
+	overflow: hidden;
+		}
+
+nav  ul{
+	list-style-type: none;
+	background-color: white;   
+	text-align: center;
+	}
+
+
+aside{
+    margin: 7%;
+    grid-area: aside;
+   
+}
+
+aside img{
+    width: auto;
+}
+
+
+footer{
+    grid-area: footer;
+    color: white;
+    background-color: black;
+    
+}
+
+footer {
+    font-style: italic;
+    padding: 1%;
+}
