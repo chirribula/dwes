@@ -1,0 +1,14 @@
+#videoclub {
+    background-image: url(/videoclub/public/img/palomitas.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    color: red;
+    font-size: 80px;
+    font-family: fantasy;
+    text-shadow: 1px 1px 4px black;
+}
+
+#navegacion {
+    background-color: black !important;
+    color: grey;
+}

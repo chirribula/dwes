@@ -1,6 +1,6 @@
 <?php
 
-require_once("models/OfertaModel.php");
+require_once "models/OfertaModel.php";
 
 class OfertaController{
 

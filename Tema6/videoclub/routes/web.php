@@ -11,20 +11,28 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
 
-Route::get('/', 'CatalogoController@index');
+Auth::routes();                                                      /*cuando instalas artisan auth*/
 
+Route::get('/', 'HomeController@index')->name('home');;
 
+Route::group(['prefix'=>'catalogo' ,'middleware'=>'auth'], function(){
 
+    Route::get('','CatalogoController@getIndex');
 
-Route::group(['prefix'=>'catalogo'], function(){
-
-    Route::get('','CatalogoController@index');
-
-    Route::get('show/{id}','CatalogoController@show');
+    Route::get('show/{id}','CatalogoController@getShow')->where('id','[0-9]+');
 
     Route::get('create','CatalogoController@create');
 
-    Route::get('edit/{id}','CatalogoController@edit');
+    Route::put('create/submit','CatalogoController@save');
+
+    Route::get('edit/{id}','CatalogoController@edit')->where('id','[0-9]+');
+
+    Route::put('edit/submit/{id}','CatalogoController@update')->where('id','[0-9]+');
+
+    Route::get('alquilar/{id}','CatalogoController@alquilar')->where('id','[0-9]+');
+
+    Route::get('devolver/{id}','CatalogoController@devolver')->where('id','[0-9]+');
 
 });

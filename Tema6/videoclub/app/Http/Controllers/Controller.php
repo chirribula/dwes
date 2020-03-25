@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Movie;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
